@@ -75,11 +75,58 @@
 					<!-- modal window - модальне вікно-->
 					<div class="backdrop is-hidden" data-modal>
 						<div class="modal">
-							<button class="button-x" data-modal-close>
-								<svg class="button-x-icon">
+							<button class="button-close" data-modal-close>
+								<svg class="button-close-icon">
 									<use href="./images/icons.svg#icon-close-7" width="11px" height="11px"></use>
 								</svg>
 							</button>
+							<form class="register-form" name="register-form">
+								<strong class="register-title">Залиште свої дані, ми вам передзвонимо</strong>
+								<div class="register-group" role="group">
+									<label class="register-wrap">
+										<span class="register-label">Ім'я</span>
+										<input class="register-field" name="user-name" type="text" />
+										<svg class="register-icon" width="18" height="18">
+											<use href="./images/icons.svg#icon-person"></use>
+										</svg>
+									</label>
+									<label class="register-wrap">
+										<span class="register-label">Телефон</span>
+										<input class="register-field" name="user-phone" type="tel" />
+										<svg class="register-icon" width="18" height="18">
+											<use href="./images/icons.svg#icon-phone"></use>
+										</svg>
+									</label>
+									<label class="register-wrap">
+										<span class="register-label">Пошта</span>
+										<input class="register-field" name="user-mail" type="email" />
+										<svg class="register-icon" width="18" height="18">
+											<use href="./images/icons.svg#icon-email"></use>
+										</svg>
+									</label>
+									<label class="register-wrap">
+										<span class="register-label">Коментар</span>
+										<textarea
+											class="register-message"
+											name="user-message"
+											rows="5"
+											placeholder="Введіть текст"
+										></textarea>
+									</label>
+								</div>
+								<label class="register-agreement">
+									<input class="register-checkbox visually-hidden" type="checkbox" name="user-agreement" />
+									<svg class="register-agreement-icon" width="16" height="15">
+										<use class="icon-uncheck" href="./images/icons.svg#icon-unchecked"></use>
+										<use class="icon-check" href="./images/icons.svg#icon-checked"></use>
+									</svg>
+									<span class="register-agreement-text">
+										Погоджуюся з розсилкою та приймаю
+										<a class="register-agreement-link" href="" target="_blank">Умови договору</a>
+									</span>
+								</label>
+								<button class="register-button button" type="submit">Відправити</button>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -542,8 +589,22 @@
 						</li>
 					</ul>
 				</div>
+				<div>
+					<h3 class="title title--white subscription-title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</h3>
+					<form class="subscription-form" name="subscription-form">
+							<label class="subscription-wrap">
+								<input class="subscription-field" name="user-mail" type="email" placeholder="E-mail" />
+							</label>
+							<button class="subscription-button button" type="submit">
+								Підписатися
+								<svg width="24" height="24">
+								<use href="./images/icons.svg#icon-send"></use>
+								</svg>
+							</button>
+						</form>
+				</div>
+					</footer>
 			</div>
-		</footer>
 		<script src="./js/modal.js"></script>
 	</body>
 </html>

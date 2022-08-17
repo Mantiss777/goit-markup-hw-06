@@ -58,7 +58,9 @@ address {
 	--bg-absolut-work:rgba(47, 48, 58, 0.8);
 	--bg-absolut-exempel:rgba(33, 150, 243, 0.9);
 	/* animation */
-	--timing-function: 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+	--timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	
+	--placeholder-color: rgba(117, 117, 117, 0.5);;
 }
 
 body {
@@ -94,7 +96,7 @@ body {
 
 	width: 1px;
 	height: 1px;
-	margin: -1px;
+	/* margin: -1px; */
 	padding: 0;
 
 	white-space: nowrap;
@@ -610,6 +612,88 @@ body {
 	margin-bottom: 9px;
 }
 
+
+/**
+  |cmmb============================
+  | Form in foorer
+  |============================
+*/
+
+.subscription-title{
+	margin-left: 93px;
+}
+.subscription-form{
+	margin-left: 93px;
+
+	display: flex;
+	gap: 12px;
+}
+
+
+.subscription-wrap{
+	font-size: 16px;
+	line-height: 1.25;
+
+
+	display: flex;
+	align-items: center;
+	letter-spacing: 0.03em;
+
+	color: rgba(255, 255, 255, 0.6);
+
+
+}
+
+
+
+.subscription-field{
+	padding: 15px;
+	min-width: 358px;
+
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	border-radius: 4px;
+	background-color: transparent;
+	color: var(--primary-bg-color);
+	outline: transparent;
+
+	transition: border-color var(--timing-function);
+
+}
+
+.subscription-field:focus {
+	border-color: var(--accent-text-color);
+}
+
+
+.subscription-button{
+	padding: 10px 28px;
+
+
+	display: flex;
+	align-items: center;
+	text-align: center;
+	gap: 10px;
+
+
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
+
+
+	letter-spacing: 0.06em;
+
+	border: 0;
+
+	fill: var(--primary-bg-color);
+	
+}
+
+
+
+
+
+
 /*===============================
 		Join in
 =================================*/
@@ -826,6 +910,7 @@ body {
 
 } 
 
+
 .modal {
 	position: absolute;
 	top:50%;
@@ -834,12 +919,14 @@ body {
 		
 	min-width: 528px;
 	min-height: 581px;
+	padding: 40px;
 
 	background-color: var(--primary-bg-color);
-
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
 
 }
-.button-x {
+.button-close {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -851,8 +938,6 @@ body {
 	width: 30px;
 	height: 30px;
 
-
-
 	text-decoration: none;
 	border: none;
 	cursor: pointer;
@@ -862,49 +947,187 @@ body {
 	border-radius: 50%;
 
 }
-.button-x-icon{
+.button-close-icon{
 	width: 11px;
 	height: 11px;
 	fill: currentColor;
 }
 
-.modal-title{
+.button-close:hover,
+.button-close:focus {
+	color: var(--accent-text-color);
+}
 
-	padding-top: 40px;
+
+
+
+/**
+  |============================
+  | register form 
+  |============================
+*/
+
+
+
+.register-title {
+	display: block;
+	margin-bottom: 12px;
+
 	font-size: 20px;
 	line-height: 1.15;
 	text-align: center;
 	letter-spacing: 0.03em;
 
-		color: var(--title-text-color);	
+	color: var(--title-text-color);	
 }
 
 
-.form{
- 
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 20px;
-	padding-right: 20px;
-	outline: 1px solid tomato;
 
 
-		/* display: flex;
-	flex-direction: column; */
+
+.register-group {
+	margin-bottom: 20px;
 }
 
-.form-field{
-	margin-bottom: 10px;
+.register-wrap {
+	position: relative;
 
 	display: flex;
 	flex-direction: column;
-	/* align-items: flex-start; */
+	gap: 4px;
+}
+
+.register-wrap:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.register-label {
+	font-size: 12px;
+	text-align: start;
+	line-height: 14px;
+	letter-spacing: 0.01em;
+	color: #757575;
+}
+
+.register-field {
+	height: 40px;
+	padding: 12px 42px;
+
+	font-size: 14px;
+	line-height: 16px;
+
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	outline: transparent;
+
+	transition: border-color var(--timing-function);
+}
+
+.register-field:focus {
+	border-color: var(--accent-text-color);
+}
+
+.register-icon {
+	position: absolute;
+	bottom: 11px;
+	left: 12px;
+
+	fill: var(--title-text-color);
+	transition: fill var(--timing-function);
 	
+
+}
+
+.register-field:focus + .register-icon {
+	fill: var(--accent-text-color);
+
+}
+
+.register-message {
+	height: 120px;
+	padding: 12px 16px;
+
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: 0.01em;
+	color: #303030;
+
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	outline: transparent;
+	resize: none;
+
+	transition: border-color var(--timing-function);
+}
+
+.register-message:focus {
+	border-color: var(--accent-text-color);
+}
+
+.register-message::placeholder {
+	color: var(--placeholder-color);
 }
 
 
+.register-agreement {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
 
+	margin-bottom: 30px;
+}
 
-.form-imput:focus + .form-label{
-	color: red;
+.register-checkbox:focus + .register-agreement-icon {
+	outline: 2px solid var(--accent-text-color);
+	outline-offset: 1px;
+	border-radius: 2px;
+}
+
+.icon-uncheck {
+	transition: opacity var(--timing-function);
+}
+
+.register-checkbox:checked + .register-agreement-icon > .icon-uncheck {
+	opacity: 0;
+}
+
+.icon-check {
+	opacity: 0;
+	fill: var(--accent-text-color);
+
+	transition: opacity var(--timing-function);
+}
+
+.register-checkbox:checked + .register-agreement-icon > .icon-check {
+	opacity: 1;
+}
+
+.register-agreement-text {
+	font-size: 12px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	color: #757575;
+
+	user-select: none;
+}
+
+.register-agreement-link {
+	color: var(--accent-text-color);
+	text-decoration: underline;
+	text-underline-position: under;
+	
+}
+
+.register-button  {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+
+	padding-left: 52px;
+	padding-right: 52px;
+
+	margin-left: auto;
+	margin-right: auto;
 }
