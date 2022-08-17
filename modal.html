@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>modal</title>
+		<!--Fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<!--modern-normalize-->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+		/>
+		<link rel="stylesheet" href="./css/styles.css" />
+	</head>
+	<body>
+		<!-- HERO -->
+		<section class="section hero overlay">
+			<div class="container">
+				<h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
+				<button class="button" data-modal-open type="button">Замовити послугу</button>
+				<!-- modal window - модальне вікно-->
+				<div class="backdrop is-hidden" data-modal>
+					<div class="modal">
+						<h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+						<button class="button-x" data-modal-close>
+							<svg class="button-x-icon">
+								<use href="./images/icons.svg#icon-close-7" width="11px" height="11px"></use>
+							</svg>
+						</button>
+						<form action="" class="form">
+							<div class="form-field">
+								<input
+									type="text"
+									class="form-input"
+									name="name"
+									id="name"
+									placeholder="Іванов Іван Іванович"
+									autofocus
+									required
+								/>
+								<label for="name" class="form-label">Ім'я</label>
+							</div>
+							<div class="form-field">
+								<label for="tel">Телефон</label>
+								<input type="tel" name="tel" id="tel" placeholder="+380_________" required />
+							</div>
+							<div class="form-field">
+								<label for="mail">Пошта</label>
+								<input type="email" name="mail" id="mail" placeholder="ivanov@gmail.com" required />
+							</div>
+							<div class="form-field">
+								<label for="comment">Коментар</label>
+								<textarea name="comment" id="comment" cols="30" rows="10" placeholder="Введіть текст"></textarea>
+							</div>
+						</form>
+						<div>
+							<input type="checkbox" name="policy" id="policy" required />
+							<label for="policy">
+								Погоджуюся з розсилкою та приймаю
+								<a href="">Умови договору</a>
+							</label>
+						</div>
+						<button class="button" type="submit">Відправити</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="./js/modal.js"></script>
+	</body>
+</html>
