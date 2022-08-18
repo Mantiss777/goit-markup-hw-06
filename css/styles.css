@@ -127,10 +127,7 @@ body {
 	align-items: center;
 }
 
-.nav {
-	display: flex;
-	align-items: center;
-}
+
 
 /**
   |cmmb============================
@@ -165,6 +162,11 @@ body {
   | Links to other pages or sections of the current page
   |============================
 */
+
+.nav {
+	display: flex;
+	align-items: center;
+}
 
 .nav__list {
 	display: flex;
@@ -350,6 +352,11 @@ body {
 
 }
 
+/**
+  |cmmb============================
+  |      button
+  |============================
+*/
 .button {
 	padding: 10px 32px;
 
