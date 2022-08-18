@@ -23,54 +23,59 @@
 		<!-- Page header -->
 		<header class="header">
 			<!-- Main navigation -->
-			<div class="container">
-				<nav class="main-nav">
+			<div class="header__container  container">
+				<nav class="nav">
 					<!--Logo-->
 					<a class="logo" href="./index.html">
-						<span class="logo-accent">Web</span>
+						<span class="logo__accent">Web</span>
 						Studio
 					</a>
 					<!--Links to other pages or sections of the current page -->
-					<ul class="site-nav">
-						<li class="item">
-							<a class="link link-home link-visit" href="./index.html">Студія</a>
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a class="nav__link nav__link--active nav__link--visit" href="./index.html">Студія</a>
 						</li>
-						<li class="item">
-							<a class="link" href="./portfolio.html">Портфоліо</a>
+						<li class="nav__item">
+							<a class="nav__link" href="./portfolio.html">Портфоліо</a>
 						</li>
-						<li class="item">
-							<a class="link" href="">Контакти</a>
+						<li class="nav__item">
+							<a class="nav__link" href="">Контакти</a>
 						</li>
 					</ul>
 				</nav>
 				<!--Links to email and phone -->
-				<ul class="email-phone position">
-					<li class="item">
-						<a class="email-style" href="mailto:info@devstudio.com">
-							<svg class="mail-icon">
-								<use href="./images/icons.svg#icon-envelope"></use>
-							</svg>
-							info@devstudio.com
-						</a>
+				<div class="contact">
+				<ul class="contact__list">
+					<li class="contact__item">
+					<a
+						class="contact__email"
+						href="mailto:info@devstudio.com"
+					>
+						<svg class="contact__email-icon ">
+						<use href="./images/icons.svg#icon-envelope"></use>
+						</svg>
+						info@devstudio.com
+					</a>
 					</li>
 
-					<li class="item">
-						<a class="phone-style" href="tel:+380961111111">
-							<svg class="phone-icon">
-								<use href="./images/icons.svg#icon-smartphone"></use>
-							</svg>
-							+380961111111
-						</a>
+					<li class="contact__item">
+					<a class="contact__phone" href="tel:+380961111111">
+						<svg class="contact__phone-icon">
+						<use href="./images/icons.svg#icon-smartphone"></use>
+						</svg>
+						+380961111111
+					</a>
 					</li>
 				</ul>
+				</div>
 			</div>
 		</header>
 
 		<main class="main">
 			<!-- HERO -->
-			<section class="section hero overlay">
+			<section class="hero section  hero__overlay">
 				<div class="container">
-					<h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
+					<h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
 					<button class="button" data-modal-open type="button">Замовити послугу</button>
 					<!-- modal window - модальне вікно-->
 					<div class="backdrop is-hidden" data-modal>
@@ -516,24 +521,27 @@
 
 		<!--Footer - Нижній колонтитул-->
 		<footer class="footer">
-			<div class="container footer-position">
+			<div class="container footer__container ">
 				<div class="footer__contacts">
 					<!--Logo-->
-					<a class="logo logo-footer" href="./index.html">
-						<span class="logo-accent">Web</span>
+					<a class="logo logo__footer " href="./index.html">
+						<span class="logo__accent">Web</span>
 						Studio
 					</a>
 					<!--Address-->
 					<address class="address">м. Київ, пр-т Лесі Українки, 26</address>
 					<!--Links to email and phone -->
-					<ul class="email-phone">
-						<li><a class="email-style" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-						<li><a class="phone-style" href="tel:+380961111111">+380961111111</a></li>
+
+					<div class="contact">
+					<ul class="contact__list--footer">
+						<li><a class="contact__email--footer" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+						<li><a class="contact__phone--footer" href="tel:+380961111111">+380961111111</a></li>
 					</ul>
+					</div>
 				</div>
+
 				<div class="company-data">
 					<h3 class="title title--white">ПРИЄДНУЙТЕСЬ</h3>
-
 					<ul class="company-links">
 						<li>
 							<a
@@ -589,6 +597,7 @@
 						</li>
 					</ul>
 				</div>
+
 				<div>
 					<h3 class="title title--white subscription-title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</h3>
 					<form class="subscription-form" name="subscription-form">
